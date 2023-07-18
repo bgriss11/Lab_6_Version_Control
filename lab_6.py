@@ -1,4 +1,6 @@
 
+# Brody Grissom
+
 # method adds 3 to each digit in given password
 def encode(password):
 	encoded_password = ''
@@ -8,17 +10,6 @@ def encode(password):
 		encoded_password += num
 
 	return encoded_password     # returns new password which each digit shifted up 3 numbers
-
-
-# method subtracts 3 from each digit in given encoded password
-def decode(encoded_password):
-	decoded_password = ''
-	for idx, num in enumerate(encoded_password):    # for-loop iterates over encoded_password
-		num = int(num) - 3
-		num = str(num)
-		decoded_password += num
-
-	return decoded_password      # returns original password given by user
 
 
 # method prints the menu options
@@ -47,9 +38,7 @@ def main():
 
 		# if user_option equals '2', the encoded password is decoded back to original password
 		elif user_option == '2':
-			decoded_password = decode(encoded_password)
-			print(f'The encoded password is {encoded_password}, and the original password is {decoded_password}.')
-			print()
+			pass
 
 		# if user_option equals '3', the program ends
 		elif user_option == '3':
