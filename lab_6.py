@@ -12,6 +12,16 @@ def encode(password):
 	return encoded_password     # returns new password which each digit shifted up 3 numbers
 
 
+def decode(password):
+    encoded_values = ''
+    for pos, num in enumerate(password):
+        num = int(num) - 3
+        num = str(num)
+        decoded_values = encoded_values + num
+
+    return decoded_values
+
+
 # method prints the menu options
 def menu():
 	print('Menu')
@@ -38,7 +48,9 @@ def main():
 
 		# if user_option equals '2', the encoded password is decoded back to original password
 		elif user_option == '2':
-			pass
+			decoded_values = decode(password)
+			print('The encoded password is ' + encoded_password + ', and the original password is ' + password + '.')
+			print()
 
 		# if user_option equals '3', the program ends
 		elif user_option == '3':
